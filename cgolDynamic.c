@@ -22,7 +22,7 @@ int main ( int argc, char *argv[] ) {
 	int grid[ROWS][COLS];
 	int futureGrid[ROWS][COLS];
 	int cycle=0;
-	int tickNum=1;
+	int tickNum=0;
 	int neighbours = 0;
 	int cont =1;
 	int sameTick = 1;
@@ -82,7 +82,6 @@ int main ( int argc, char *argv[] ) {
 			}else if ((strcmp(start,"n\n")==0)||(strcmp(start,"N\n")==0)){
 				cont = 0;
 				yorn =0;
-				printf("Thanks for playing conway's game of life!\n");
 			}else{
 				printf("inalid input: must be y or n\n");
 				yorn = 1;
@@ -121,7 +120,6 @@ int main ( int argc, char *argv[] ) {
 				if (tickNum>1){
 						same = checkEqual(grid,futureGrid);
 						if (same==0){
-							printf("There are no more changes to this grid.\n");
 							exit(1);
 						}else{
 							same = 1;
@@ -130,6 +128,8 @@ int main ( int argc, char *argv[] ) {
 				tickNum++;
 				system("clear");
 				printGrid(futureGrid,tickNum);
+
+
 
 
 				/*printf("%d\n", tickNum);*/
