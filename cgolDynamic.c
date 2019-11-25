@@ -2,11 +2,11 @@
 #include <stdlib.h>
 #include <string.h>
 #include<stdbool.h>
-#define ROWS 20
-#define COLS 40
+/*#define ROWS 20
+#define COLS 40*/
 
 /*
- * Program Name:cgol.c
+ * Program Name:cgoldynamic.c
  * Author(s): Lauren Lobo
  * Purpose:
  */
@@ -15,7 +15,8 @@
 #include "checkEqual.c"
 
 int main ( int argc, char *argv[] ) {
-
+	ROWS = argv[3];
+	COLS = argv[4];
 	FILE *f1;
 	FILE *f2;
 	int array[100000];
@@ -45,7 +46,7 @@ int main ( int argc, char *argv[] ) {
 
 
 
-		if (argc < 2 || argc>3){
+		if (argc < 2 || argc>4){
 			printf("usage: ./cgol filename.seed ##\n");
 		}
 

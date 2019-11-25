@@ -6,7 +6,7 @@ cgol: cgol.o
 checkAlive: checkAlive.c
 	gcc -ansi -Wall -c checkAlive.c
 
-heckAlive: checkEqual.c
+checkEqual: checkEqual.c
 	gcc -ansi -Wall -c checkEqual.c
 
 printGrid: printGrid.c
